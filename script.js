@@ -1,27 +1,18 @@
 // Assignment Code
 
-var character = ["!@#$%&()[]{}|;:,./?><'"];
+var special = ["!@#$%&()[]{}|;:,./?><'"];
 var number = ["1234567890"];
 var upperLetters = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 var lowerLetters = ["abcdefghijklmnopqrstuvwxyz"];
 var generateBtn = document.querySelector("#generate");
-var userLength = userLength;
-
-var useUpper = true;
-var useLower = true;
-var useSpecial = true;
-var useNumbers = true;
-
-var noUpper = false;
-var noLower = false;
-var noSpecial = false;
-var noNumbers = false;
+var userLength = "";
 
 // Write password to the #password input
 function writePassword() {
  
 
   userLength = window.prompt ("How many characters do you wish to have (Choose between 8-128)");
+    // console.log(userLength);
 
   if (!userLength) {
     alert("Cannot leave blank");
@@ -74,72 +65,89 @@ function writePassword() {
       //originally used , here instead of &&, which worked until I finished all conditions
       
   if (confirmUpper && confirmLower && confirmNumbers && confirmSpecial) {
-    console.log("all");    
+    // console.log("all");
+    answer = upperLetters.concat(lowerLetters,number,character);
+        
   }
   if (confirmUpper && confirmLower && confirmNumbers && !confirmSpecial) {
-    console.log("Upper, Lower, Numbers");
+    // console.log("Upper, Lower, Numbers");
+    answer = upperLetters.concat(lowerLetters,number);
   }
   if (confirmUpper && confirmLower && !confirmNumbers && !confirmSpecial) {
-    console.log("Upper, Lower");
+    // console.log("Upper, Lower");
+    answer = upperLetters.concat(lowerLetters);
   }
   if (confirmUpper && !confirmLower && !confirmNumbers && !confirmSpecial) {
-    console.log("Upper");
+    // console.log("Upper");
+    answer = upperLetters
   }
   if (confirmUpper && !confirmLower && confirmNumbers && !confirmSpecial) {
-    console.log("Upper, Number")
+    // console.log("Upper, Number")
+    answer = upperLetters.concat(number);
   }
   if (confirmUpper && !confirmLower && !confirmNumbers&& confirmSpecial) {
-    console.log("Upper, Special")
+    // console.log("Upper, Special")
+    answer = upperLetters.concat(special)
   }
   if (!confirmUpper && !confirmLower && !confirmNumbers && !confirmSpecial) {
-    console.log("none");
+    // console.log("none");
+     alert("Must choose One")
   }
   if (!confirmUpper && confirmLower && !confirmNumbers && !confirmSpecial) {
-    console.log("Lower");
+    // console.log("Lower");
+    answer = lowerLetters
   }
   if (confirmUpper && !confirmLower && confirmNumbers && confirmSpecial) {
-    console.log("Upper, Numbers, Special");
+    // console.log("Upper, Numbers, Special");
+    answer = upperLetters.concat(number, special)
   }
   if (confirmUpper && confirmLower && !confirmNumbers && confirmSpecial) {
-    console.log("Upper, Lower, Special")
+    // console.log("Upper, Lower, Special")
+    answer = upperLetters.concat(lowerLetters, special);
   }
   if (!confirmUpper && confirmLower && confirmNumbers && confirmSpecial) {
-    console.log("Lower, Number, Special"); 
+    // console.log("Lower, Number, Special"); 
+    answer = lowerLetters.concat(number, special);
   } 
   if (!confirmUpper && confirmLower && confirmNumbers && !confirmSpecial) {
-    console.log("Lower, Numbers"); 
+    // console.log("Lower, Numbers"); 
+    answer = lowerLetters.concat(number);
   }
   if (!confirmUpper && confirmLower && !confirmNumbers && confirmSpecial) {
-      console.log("Lower, Special"); 
+    //   console.log("Lower, Special"); 
+    answer = lowerLetters.concat(special);
   }
   if (!confirmUpper && !confirmLower && confirmNumbers && confirmSpecial) {
-    console.log("Numbers, Special");      
+    // console.log("Numbers, Special");      
+    answer = number.concat(special);
   }
   if (!confirmUpper && !confirmLower && confirmNumbers && !confirmSpecial) {
-    console.log("Numbers"); 
+    // console.log("Numbers"); 
+    answer = number
   }
   if (!confirmUpper && !confirmLower && !confirmNumbers && confirmSpecial) {
-    console.log("Special");    
+    // console.log("Special");    
+    answer = special
   };
-}
+
+console.log(answer);
 
 
 
 
-
-    for (let i = 0; i < userLength; i++) {
-      password += passwordCharSet.charAt (
-        Math.floor(Math.random() * passwordCharSet.length));
+    // for (let i = 0; i <= userLength; i++) {
+    //   password += passwordCharSet.charAt (
+    //     Math.floor(Math.random() * passwordCharSet.length));
       
-    }
+    // }
 
-
- var password = generatePassword();
+// var password = answer;
+ password = generatePassword();
  var passwordText = document.querySelector("#password");
 
  passwordText.value = password;
 
-
+}
 
 
 // Add event listener to generate button
