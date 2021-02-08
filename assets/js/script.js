@@ -10,20 +10,23 @@ var userLength = "";
 // Write password to the #password input
 function writePassword() {
  
-
+//Prompt user to choose characters
   userLength = window.prompt ("How many characters do you wish to have (Choose between 8-128)");
     // console.log(userLength);
 
+    //lesson 26 stop the use of nothing
   if (!userLength) {
     alert("Cannot leave blank");
 }
-
+// creates rules for length
   else if (userLength < 8 || userLength > 128) {
       alert("Must choose between 8 and 128");
  }
-
+// Must satisfy BOTH criteria
   else (userLength >= 8 && userLength <= 128) 
-   
+   // need code for another user box to pop up asking next set of questions?  need to hold the data?
+
+
     confirmUpper = confirm("Would you like to use UpperCase letters?");
     //Used these console.logs to confirm working code
 
@@ -66,7 +69,7 @@ function writePassword() {
       
   if (confirmUpper && confirmLower && confirmNumbers && confirmSpecial) {
     // console.log("all");
-    answer = upperLetters.concat(lowerLetters,number,character);
+    answer = upperLetters.concat(lowerLetters,number,special);
         
   }
   if (confirmUpper && confirmLower && confirmNumbers && !confirmSpecial) {
@@ -131,21 +134,25 @@ function writePassword() {
   };
 
 console.log(answer);
+// 👍 Need Math
 
 
+ 
+    let pass = "" ;
+    for (let i = 0; i <= userLength; i++) {
+      pass = Math.floor(Math.random() * userLength);
+         
+    }
+    
+    
 
+//  password = generatePassword();
 
-    // for (let i = 0; i <= userLength; i++) {
-    //   password += passwordCharSet.charAt (
-    //     Math.floor(Math.random() * passwordCharSet.length));
-      
-    // }
-
-// var password = answer;
- password = generatePassword();
+// appends tag as child of document body lesson 07 append
  var passwordText = document.querySelector("#password");
-
- passwordText.value = password;
+ passwordText.prepend(pass);
+ 
+//  passwordText.value = password;
 
 }
 
