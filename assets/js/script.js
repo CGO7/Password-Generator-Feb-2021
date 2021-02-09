@@ -139,18 +139,24 @@ console.log(answer);
 
  
     let pass = "" ;
-    for (var i = 0, n =userLength; i < userLength; i++) {
-      pass += (Math.floor(Math.random() * n));      
-    }
+    for (var i = 0; i < userLength; i++) {
+     var randomNumber = (Math.floor(Math.random() * answer.length) ); 
+     var choice = answer[randomNumber]
+    //  console.log(choices)
+    var choiceLength = choice.length
+    randomNumber = (Math.floor(Math.random() * choice.length) );
+    pass = choice.charAt(randomNumber).concat(randomNumber)
     
 
+    }
+    
 
 //  password = generatePassword();
 
 // appends tag as child of document body lesson 07 append
  var passwordText = document.querySelector("#password");
  passwordText.prepend(pass);
-    } 
+} 
 //  passwordText.value = password;
 
 
