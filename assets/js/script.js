@@ -139,22 +139,21 @@ console.log(answer);
 
  
     let pass = "" ;
-    for (let i = 0; i <= userLength; i++) {
-      pass = Math.floor(Math.random() * userLength);
-         
+    for (var i = 0, n =userLength; i < userLength; i++) {
+      pass += (Math.floor(Math.random() * n));      
     }
     
-    
+
 
 //  password = generatePassword();
 
 // appends tag as child of document body lesson 07 append
  var passwordText = document.querySelector("#password");
  passwordText.prepend(pass);
- 
+    } 
 //  passwordText.value = password;
 
-}
+
 
 
 // Add event listener to generate button
