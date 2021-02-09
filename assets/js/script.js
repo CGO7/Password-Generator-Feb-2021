@@ -69,8 +69,7 @@ function writePassword() {
       
   if (confirmUpper && confirmLower && confirmNumbers && confirmSpecial) {
     // console.log("all");
-    answer = upperLetters.concat(lowerLetters,number,special);
-        
+    answer = upperLetters.concat(lowerLetters,number,special);     
   }
   if (confirmUpper && confirmLower && confirmNumbers && !confirmSpecial) {
     // console.log("Upper, Lower, Numbers");
@@ -145,7 +144,7 @@ console.log(answer);
     //  console.log(choices)
     var choiceLength = choice.length
     randomNumber = (Math.floor(Math.random() * choice.length) );
-    pass = choice.charAt(randomNumber).concat(randomNumber)
+    pass = choice.charAt(randomNumber).concat(pass) 
     
 
     }
