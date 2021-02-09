@@ -10,6 +10,6 @@ In this project the HTML and CSS were given and I was required to build on the J
 
 ### Screenshots of Website
 
-![alt text](character.jpg)
-![alt text](prompwindow.png)
+![alt text](characters.png)
+![alt text](promptwindow.png)
 ![alt text](PasswordGenerator.png)
