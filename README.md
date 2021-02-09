@@ -21,5 +21,6 @@ In this project the HTML and CSS were given and I was required to build on the J
 I had to take my pseudocoding down to the most basic functions, to really understand how this project would work.  I started and scratched so many different ideas because I did not understand what was going on with the structure of the JavaScript.  What I mean by that is I understand how to add eventlistners, and I understood how to ask questions with Java what I could not figure out is how the values were stored.  I knew that they would need to be called but did not understand where to call from.  It was once I figured this out that I was even able to begin on this project.  I used console.log throughout the whole project to help myself understand that the Java was holding the values.  I still could not figure out the math, and this was extremely frustrating, but I will continue to study and understand until I get it.**got the math code at 11:12p.m.! 
 
 #### Credits
-UTSA coding school, for writing the code for me to work on.
+UTSA coding school, for writing the code for me to work on.<br>
+
 Hagen DeRouen - helped me finish math code at the end.
