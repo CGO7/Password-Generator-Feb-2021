@@ -10,9 +10,9 @@ In this project the HTML and CSS were given and I was required to build on the J
 
 ### Screenshots of Website
 
-![alt text](PasswordGenerator.png)
-![alt text](promptwindow.png)
-![alt text](characters.png)
+![alt text](assets./PasswordGenerator.png)
+![alt text](assets./promptwindow.png)
+![alt text](assets./characters.png)
 
 ### My biggest hurdles
 
