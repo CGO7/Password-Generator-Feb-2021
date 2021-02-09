@@ -6,6 +6,8 @@ In this project, I was commissioned to set up a password generator, using Prompt
 
 ### Code
 
+https://cgo7.github.io/Password-Generator-Feb-2021/
+
 In this project the HTML and CSS were given and I was required to build on the JavaScript file that was provided.
 
 ### Screenshots of Website
