@@ -22,3 +22,4 @@ I had to take my pseudocoding down to the most basic functions, to really unders
 
 #### Credits
 UTSA coding school, for writing the code for me to work on.
+Hagen DeRouen - helped me finish math code at the end.
